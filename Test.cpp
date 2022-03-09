@@ -100,6 +100,9 @@ TEST_CASE("Bad input") {
     
 	CHECK_THROWS(mat(10, 5, '$', '%'));
 
+	CHECK_THROWS(mat(0, 5, '!', '?'));
+	CHECK_THROWS(mat(2, 0, '?', '!'));
+
 
 	//negtive values
 	for (int j = -1; j > -5; j--)
